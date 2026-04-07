@@ -22,6 +22,9 @@ let reverse = false
 let pintinhaColor1 = "white"
 let pintinhaColor = "black"
 
+let timer = "";
+let html = "";
+
 
 //AUDIO
 let audioCtx
