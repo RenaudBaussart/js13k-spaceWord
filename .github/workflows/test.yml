@@ -1,0 +1,16 @@
+name: Test Workflow
+
+on: push
+
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Dire Bonjour
+        run: echo "Hello Github Actions!"
+
+      - name: Lister le contenu du repo
+        run: ls -la
