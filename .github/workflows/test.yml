@@ -3,14 +3,19 @@ name: Test Workflow
 on: push
 
 jobs:
-  my_first_job:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout du code
         uses: actions/checkout@v3
 
-      - name: Dire Bonjour
-        run: echo "Hello Github Actions!"
+      # node js configuration
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x' 
+          cache: 'npm' 
 
-      - name: Lister le contenu du repo
-        run: ls -la
+      # dependencies installation
+      - name: Installation des dépendances
+        run: npm ci
