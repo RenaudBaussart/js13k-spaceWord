@@ -1,0 +1,12 @@
+{
+  "name": "jeux_videops",
+  "version": "1.0.0",
+  "description": "Projet Bootstrap DevOps",
+  "main": "script.js",
+  "scripts": {
+    "lint": "npx eslint script.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}
