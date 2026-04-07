@@ -13,9 +13,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x' 
-          cache: 'npm' 
+          node-version: '18.x'
 
       # dependencies installation
       - name: Installation des dépendances
-        run: npm ci
+        run: npm install
+
+      - name: Vérifier la qualité du code (Linting)
+        run: npm run lint
